@@ -5,10 +5,14 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import com.ctre.phoenix6.hardware.TalonFX;
 
 public class feeder extends SubsystemBase {
   /** Creates a new feeder. */
-  public feeder() {}
+  private TalonFX m_boosie;
+  public feeder() {
+    m_boosie = new TalonFX[12];
+  }
 
   @Override
   public void periodic() {
